@@ -2,7 +2,7 @@
  * RENAISSANCE FINANCE KPI — service worker
  *
  * Caches only the app shell (HTML, JS, CSS, icons, fonts) so the interface opens without internet.
- * Business data is NOT here: it lives in the browser's localStorage and is never sent over the network.
+ * Business data is NOT cached here: it is loaded from the Supabase cloud database (another origin, always network).
  */
 
 const VERSION = new URL(self.location.href).searchParams.get('v') || 'dev';
